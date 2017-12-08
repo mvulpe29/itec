@@ -1,0 +1,24 @@
+{
+    "itecApp": {
+        "comment" : {
+            "home": {
+                "title": "Comments",
+                "createLabel": "Creeare o nouă entitate Comment",
+                "createOrEditLabel": "Creeare sau editare Comment"
+            },
+            "created": "A fost creată o nouă entitate Comment cu identificatorul {{ param }}",
+            "updated": "Comment cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Comment cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Comment {{ id }}?"
+            },
+            "detail": {
+                "title": "Comment"
+            },
+            "content": "Content",
+            "deleted": "Deleted",
+            "issue": "Issue",
+            "user": "User"
+        }
+    }
+}

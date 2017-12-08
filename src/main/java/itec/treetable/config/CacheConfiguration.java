@@ -45,6 +45,11 @@ public class CacheConfiguration {
             cm.createCache(itec.treetable.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(itec.treetable.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(itec.treetable.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(itec.treetable.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(itec.treetable.domain.Issue.class.getName(), jcacheConfiguration);
+            cm.createCache(itec.treetable.domain.Issue.class.getName() + ".comments", jcacheConfiguration);
+            cm.createCache(itec.treetable.domain.Vote.class.getName(), jcacheConfiguration);
+            cm.createCache(itec.treetable.domain.Comment.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

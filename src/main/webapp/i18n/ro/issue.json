@@ -1,0 +1,27 @@
+{
+    "itecApp": {
+        "issue" : {
+            "home": {
+                "title": "Issues",
+                "createLabel": "Creeare o nouă entitate Issue",
+                "createOrEditLabel": "Creeare sau editare Issue"
+            },
+            "created": "A fost creată o nouă entitate Issue cu identificatorul {{ param }}",
+            "updated": "Issue cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Issue cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Issue {{ id }}?"
+            },
+            "detail": {
+                "title": "Issue"
+            },
+            "title": "Title",
+            "detail": "Detail",
+            "archived": "Archived",
+            "solved": "Solved",
+            "location": "Location",
+            "user": "User",
+            "comments": "Comments"
+        }
+    }
+}

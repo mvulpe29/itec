@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "latitute",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171208230712",
+    "entityTableName": "location",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

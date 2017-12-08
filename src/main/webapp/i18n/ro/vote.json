@@ -1,0 +1,24 @@
+{
+    "itecApp": {
+        "vote" : {
+            "home": {
+                "title": "Votes",
+                "createLabel": "Creeare o nouă entitate Vote",
+                "createOrEditLabel": "Creeare sau editare Vote"
+            },
+            "created": "A fost creată o nouă entitate Vote cu identificatorul {{ param }}",
+            "updated": "Vote cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Vote cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Vote {{ id }}?"
+            },
+            "detail": {
+                "title": "Vote"
+            },
+            "up": "Up",
+            "down": "Down",
+            "comment": "Comment",
+            "user": "User"
+        }
+    }
+}

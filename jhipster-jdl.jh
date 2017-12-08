@@ -1,0 +1,44 @@
+
+entity Location{
+	latitute Double
+    longitude Double
+}
+
+entity Issue {
+	title String
+    detail String
+    archived Boolean
+    solved Boolean
+}
+
+entity Vote {
+	up Boolean
+    down Boolean
+}
+
+entity Comment {
+	content String
+    deleted Boolean
+}
+
+
+relationship OneToOne {
+	Issue{location} to Location
+    Issue{user} to User
+}
+
+relationship OneToOne {
+	Vote{comment} to Comment
+    Vote{user} to User
+}
+
+relationship OneToOne {
+	Comment{user} to User
+}
+
+relationship OneToMany {
+	Issue{comments} to Comment
+}
+
+// Set service options to all except few
+service all with serviceImpl

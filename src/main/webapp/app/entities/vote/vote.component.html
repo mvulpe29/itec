@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="itecApp.vote.home.title">Votes</span>
+        <button class="btn btn-primary float-right jh-create-entity create-vote" [routerLink]="['/', { outlets: { popup: ['vote-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="itecApp.vote.home.createLabel">
+            Create new Vote
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="votes">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="itecApp.vote.up">Up</span></th>
+            <th><span jhiTranslate="itecApp.vote.down">Down</span></th>
+            <th><span jhiTranslate="itecApp.vote.comment">Comment</span></th>
+            <th><span jhiTranslate="itecApp.vote.user">User</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let vote of votes ;trackBy: trackId">
+                <td><a [routerLink]="['../vote', vote.id ]">{{vote.id}}</a></td>
+                <td>{{vote.up}}</td>
+                <td>{{vote.down}}</td>
+                <td>
+                    <div *ngIf="vote.comment">
+                        <a [routerLink]="['../comment', vote.comment?.id ]" >{{vote.comment?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    {{vote.user?.id}}
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../vote', vote.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'vote/'+ vote.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'vote/'+ vote.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

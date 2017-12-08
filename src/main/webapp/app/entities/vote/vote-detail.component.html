@@ -1,0 +1,39 @@
+
+<div *ngIf="vote">
+    <h2><span jhiTranslate="itecApp.vote.detail.title">Vote</span> {{vote.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="itecApp.vote.up">Up</span></dt>
+        <dd>
+            <span>{{vote.up}}</span>
+        </dd>
+        <dt><span jhiTranslate="itecApp.vote.down">Down</span></dt>
+        <dd>
+            <span>{{vote.down}}</span>
+        </dd>
+        <dt><span jhiTranslate="itecApp.vote.comment">Comment</span></dt>
+        <dd>
+            <div *ngIf="vote.comment">
+                <a [routerLink]="['/comment', vote.comment?.id]">{{vote.comment?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="itecApp.vote.user">User</span></dt>
+        <dd>
+            {{vote.user?.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'vote/'+ vote.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

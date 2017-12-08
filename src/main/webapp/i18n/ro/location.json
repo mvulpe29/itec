@@ -1,0 +1,22 @@
+{
+    "itecApp": {
+        "location" : {
+            "home": {
+                "title": "Locations",
+                "createLabel": "Creeare o nouă entitate Location",
+                "createOrEditLabel": "Creeare sau editare Location"
+            },
+            "created": "A fost creată o nouă entitate Location cu identificatorul {{ param }}",
+            "updated": "Location cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Location cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Location {{ id }}?"
+            },
+            "detail": {
+                "title": "Location"
+            },
+            "latitute": "Latitute",
+            "longitude": "Longitude"
+        }
+    }
+}
